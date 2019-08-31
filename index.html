@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Literacy Quiz</title>
+    <meta charset="UTF-8">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <link rel='stylesheet' type="text/css" href="./index.css" />
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+</head>
+
+<body>
+    <div id='container'>
+        <div class='col'>
+            <h1 class='heading'>Correct</h1>
+            <ol id='correct-items'></ol>
+        </div>
+        <div class='col' style='justify-content: center;'>
+                <div id='quiz-selection-container'></div>
+                <div id='question-container'>
+                    <div id='question'>What <span id='item-type'></span> is this?</div>
+                    <div id='item'>A</div>
+                    <div id='btn-container'>
+                        <button id='correct-btn' class='btn btn-success' onclick='mark(true)'>Correct</button>
+                        <button id='incorrect-btn' class='btn btn-danger' onclick='mark(false)'>Incorrect</button>
+                    </div>
+                </div>
+        </div>
+        <div class='col'>
+            <h1 class='heading'>Incorrect</h1>
+            <ol id='incorrect-items'></ol>
+        </div>
+    </div>
+    <script type="text/javascript" src="index.js"></script>
+</body>
+</html>
