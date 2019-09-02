@@ -44,6 +44,8 @@ li{
 }
 .btn{
     border-radius: 5px;
+    margin-top: 10px;
+    margin-bottom: 10px;
 }
 #item{
     font-size: 8em;
