@@ -16,7 +16,21 @@
             <ol id='correct-items'></ol>
         </div>
         <div class='col' style='justify-content: center;'>
-                <div id='quiz-selection-container'></div>
+                <div id='quiz-selection-container'>
+                    <h3 id='select-quiz-heading'>Select A Quiz</h3>
+                </div>
+                <div id='custom-quiz-setup-container'>
+                    <p>Enter your quiz list.</p>
+                    <p>Place each item on its own line.</p>
+                    <form class='flexColCenterCenter'>
+                        <textarea id='custom-input'></textarea>
+                        <div style='margin-top: 10px'>
+                            <input type='radio' name='input-unit-type' value='letter' checked> Letters&nbsp;
+                            <input type='radio' name='input-unit-type' value='word'> Words
+                        </div>
+                    </form>
+                    <button class='btn btn-light' onclick='startCustomQuiz()'>Go!</button>
+                </div>
                 <div id='question-container'>
                     <div id='question'>What <span id='item-type'></span> is this?</div>
                     <div id='item'>A</div>
@@ -24,6 +38,7 @@
                         <button id='correct-btn' class='btn btn-success' onclick='mark(true)'>Correct</button>
                         <button id='incorrect-btn' class='btn btn-danger' onclick='mark(false)'>Incorrect</button>
                     </div>
+                    <button id='restart-btn' class='btn btn-light' onclick='location.reload()'>Restart</button>
                 </div>
         </div>
         <div class='col'>

@@ -41,6 +41,7 @@ li{
 .heading{
     border-bottom: 2px solid white;
     color: white;
+    display: none;
 }
 .btn{
     border-radius: 5px;
@@ -72,6 +73,28 @@ li{
     align-items: center;
     display: none;
 }
+#custom-quiz-setup-container{
+    width: 100%;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    display: none;
+}
 .btn-light{
     border-color: slategray !important;
+}
+#select-quiz-heading{
+    border-bottom: 5px solid black
+}
+#custom-input{
+    height: 30vh;
+}
+.flexColCenterCenter{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+#restart-btn{
+    display: none;
 }

@@ -67,6 +67,7 @@ const setItem = () => {
         currentItem = selectedList[index];
     } else{
         currentItem = `${correctList.length} Correct <hr /> ${incorrectList.length} Incorrect`;
+        $('#restart-btn').css('display', 'flex');
         $('#correct-btn').remove();
         $('#incorrect-btn').remove();
         $('#question').remove();
@@ -82,15 +83,39 @@ const displayQuizOptions = () => {
         return `<button class='btn btn-light' onclick='selectQuiz(${index})'>${quiz.name}</button>`;
     })
 
+    quizOptionButtons.unshift("<button class='btn btn-light' onclick=\"selectQuiz('custom')\">Custom</button>");
+
     $('#quiz-selection-container').append(quizOptionButtons);
 }
 
 const selectQuiz = (index) => {
-    selectedQuiz = quizzes[index];
+    if(isNaN(index)){
+        $('#quiz-selection-container').css('display', 'none');
+        $('#custom-quiz-setup-container').css('display', 'flex');
+
+    } else{
+        selectedQuiz = quizzes[index];
+        selectedList = selectedQuiz.list;
+        $('#quiz-selection-container').css('display', 'none');
+        displayQuiz();
+    }
+}
+
+const startCustomQuiz = () => {
+    selectedQuiz = {
+        name: 'Custom',
+        unit: $("input[name=input-unit-type]:checked").val(),
+        list: $('#custom-input')[0].value.split('\n').filter(input => {return input !== ''})
+    };
     selectedList = selectedQuiz.list;
-    $('#quiz-selection-container').css('display', 'none');
+    $('#custom-quiz-setup-container').css('display', 'none');
+    displayQuiz();
+}
+
+const displayQuiz = () => {
     $('#question-container').css('display', 'flex');
     $('#item-type')[0].innerText = selectedQuiz.unit;
+    $('.heading').css('display', 'flex');
     setItem();
     buildLists();
     quizzes = [];
