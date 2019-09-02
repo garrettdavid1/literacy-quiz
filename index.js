@@ -10,6 +10,11 @@ let quizzes = [
         list: ['a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'm', 'n', 'o', 'p', 'q', 'r', 's', 't', 'u', 'v', 'w', 'x', 'y', 'z']
     },
     {
+        name: '3-Letter CVC (I)',
+        unit: 'word',
+        list: ['bid','big','bin','bit','did','dig','din','dip','fib','fig','fin','fit','fix','gig','hid','him','hip','his','hit','jig','kid','kit','lid','lit','nip','mit','mix','pig','pin','pin','pit','rid','rig','rim','rip','sin','sip','sit','six','tin','tip','wig','win','wit','zip']
+    },
+    {
         name: 'Dolch Sight Words (Pre-Primer)',
         unit: 'word',
         list: ['a', 'find', 'is', 'not', 'three', 'and', 'for', 'it', 'one', 'to', 'away', 'funny', 'jump', 'play', 'two', 'big', 'go', 'little', 'red', 'up', 'blue', 'help', 'look', 'run', 'we', 'can', 'here', 'make', 'said', 'where', 'come', 'I', 'me', 'see', 'yellow', 'down', 'in', 'my', 'the', 'you']
